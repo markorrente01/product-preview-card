@@ -31,7 +31,6 @@ main {
 .desktop-image {
   display: none;
   height: 100%;
-  width: auto;
   border-top-left-radius: 0.625rem;
   border-bottom-left-radius: 0.625rem;
 }

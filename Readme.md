@@ -29,14 +29,14 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/mobile-first-workflow-sass-flexbox-ePJgP3q53O)
+- [Live site url](https://markorrente01.github.io/product-preview-card/)
 
 ## My process
 
 - starting building with the popular mobile-first workflow from screen size of 375px.
 - used chrome develop tools to adjust the screen to my desired size.
-- used lt [browser](https://www.lambdatest.com/mobile-view-website) to test responsiveness on different devices.
+- used [LT browser](https://www.lambdatest.com/mobile-view-website) to test responsiveness on different devices.
 
 ### Built with
 

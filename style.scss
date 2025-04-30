@@ -50,6 +50,7 @@ img, picture, video, canvas, svg {
 
 /*************************************************/
 
+
 main{
     width: 100%;
     display: flex;
@@ -63,8 +64,7 @@ main{
 
 .desktop-image {
     display: none;
-    height: 100%;
-    width: auto; 
+    height: 100%; 
     border-top-left-radius: .625rem;
     border-bottom-left-radius: .625rem;
 }
