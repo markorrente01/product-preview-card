@@ -1,0 +1,185 @@
+/* reuseable variables */
+$green-500: hsl(158, 36%, 37%);
+$green-700: hsl(158, 42%, 18%);
+$black: hsl(212, 21%, 14%);
+$grey: hsl(228, 12%, 48%);
+$cream: hsl(30, 38%, 92%);
+$white: hsl(0, 0%, 100%);
+$margin: 0 1.5rem;
+$margin-scale: 1.8em 1.8rem;
+$margin-scale1: 1.3em;
+$margin-b: 1.5rem;
+$margin-b1: 1rem;
+
+
+/* mixins for the variable fonts to avoid repetition*/
+@mixin montserrat($f-size: normal, $weight: normal){
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-size: $f-size;
+    font-style: normal;
+}
+
+@mixin Fraunces($f-size:normal){
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: $f-size;
+    font-style: normal;
+    font-variation-settings:
+      "SOFT" 0,
+      "WONK" 0;
+}
+
+/************* standard resets ****************/
+
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+ 
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*************************************************/
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+}
+
+.mobile-image{
+    margin-bottom: $margin-b;
+}
+
+.desktop-image {
+    display: none;
+    height: 100%;
+    width: auto; 
+    border-top-left-radius: .625rem;
+    border-bottom-left-radius: .625rem;
+}
+
+header{
+
+    margin: $margin;
+    p{
+        margin-bottom: .8rem;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        @include montserrat($f-size:0.875rem);
+    }
+
+    h1{
+        margin-bottom: $margin-b1;
+        line-height: 1;
+        @include Fraunces;
+    }
+}
+
+article{
+    margin: $margin;
+    p{
+        margin-bottom: $margin-b;
+        line-height: 1.8;
+        @include montserrat($f-size:0.875rem);
+    }
+}
+
+section{
+    display: flex;
+    margin: $margin;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: $margin-b1;
+    h1{
+        @include Fraunces;
+        font-size: 2rem;
+        color: $green-500;
+    }
+    p{
+        @include montserrat($f-size:0.875rem);
+    }
+}
+
+div[role="button"]{
+    margin: 0 1.5rem 1rem 1.5rem;
+    padding: .8rem 0;
+    border-radius: .45rem;
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+    background-color: $green-500;
+    color: $white;
+    @include montserrat($weight:700, $f-size:0.875rem);
+    transition: 0.2s linear;
+}
+
+/* Medium devices — e.g. some larger phones and small tablets */
+@media (min-width: 31.25rem) {
+    h1 {
+        font-size: clamp(2rem, 2.29vw + 0.625rem, 2.5rem);
+      }
+      
+      p {
+        font-size: clamp(1rem, 1.14vw + 0.313rem, 1.188rem);
+      }
+      
+}
+
+/* Larger devices — tablets and small laptops */
+@media (min-width: 37.5rem) {
+
+    body{
+        min-height: 100vh;
+        background-color: $cream;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .mobile-image{
+        display: none;
+    }
+
+    .desktop-image{
+        display: block;
+    }
+
+    main{
+        flex-direction: row;
+        width: 37.5rem;
+        border-radius: .625rem;
+    }
+
+    header{
+
+        margin: $margin-scale;
+    }
+
+    article{
+        margin: 0 1.8rem ;
+        p{
+            margin-bottom: $margin-scale1;
+            line-height: 1.8;
+        }
+    }
+    
+    section{
+        gap: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    div[role="button"]:hover{
+        background-color: $green-700;
+    }
+}

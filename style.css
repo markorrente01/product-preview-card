@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/* reuseable variables */
+/* mixins for the variable fonts to avoid repetition*/
+/************* standard resets ****************/
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*************************************************/
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.mobile-image {
+  margin-bottom: 1.5rem;
+}
+
+.desktop-image {
+  display: none;
+  height: 100%;
+  width: auto;
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+}
+
+header {
+  margin: 0 1.5rem;
+}
+header p {
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-size: 0.875rem;
+  font-style: normal;
+}
+header h1 {
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: normal;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+
+article {
+  margin: 0 1.5rem;
+}
+article p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-size: 0.875rem;
+  font-style: normal;
+}
+
+section {
+  display: flex;
+  margin: 0 1.5rem;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+section h1 {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: normal;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+}
+section p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-size: 0.875rem;
+  font-style: normal;
+}
+
+div[role=button] {
+  margin: 0 1.5rem 1rem 1.5rem;
+  padding: 0.8rem 0;
+  border-radius: 0.45rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 0.875rem;
+  font-style: normal;
+  transition: 0.2s linear;
+}
+
+/* Medium devices — e.g. some larger phones and small tablets */
+@media (min-width: 31.25rem) {
+  h1 {
+    font-size: clamp(2rem, 2.29vw + 0.625rem, 2.5rem);
+  }
+  p {
+    font-size: clamp(1rem, 1.14vw + 0.313rem, 1.188rem);
+  }
+}
+/* Larger devices — tablets and small laptops */
+@media (min-width: 37.5rem) {
+  body {
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-image {
+    display: none;
+  }
+  .desktop-image {
+    display: block;
+  }
+  main {
+    flex-direction: row;
+    width: 37.5rem;
+    border-radius: 0.625rem;
+  }
+  header {
+    margin: 1.8em 1.8rem;
+  }
+  article {
+    margin: 0 1.8rem;
+  }
+  article p {
+    margin-bottom: 1.3em;
+    line-height: 1.8;
+  }
+  section {
+    gap: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  div[role=button]:hover {
+    background-color: hsl(158, 42%, 18%);
+  }
+}/*# sourceMappingURL=style.css.map */
